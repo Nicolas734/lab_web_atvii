@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { TeamProps, MatchProps, ContextProps, ThemeProps } from "../types";
 import Team from "../services/Team";
 import Match from "../services/Match";
-import { light } from "../styles/theme";
+import { dark, light } from "../styles/theme";
 import { ThemeProvider } from "styled-components";
 
 const Contexto = createContext({} as ContextProps);

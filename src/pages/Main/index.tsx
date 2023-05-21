@@ -1,16 +1,19 @@
 import styled from "styled-components";
-import { LeftSld } from "../../components/Left";
+import { Left } from "../../components/Left";
 import { Right } from "../../components/Right";
+import { Header } from "../../components/Header";
+import { SwitchTheme } from "../../components/SwitchTheme";
 
 
 function Main() {
   return (
     <BodySld>
-      <BarSld>Titulo</BarSld>
+      <Header/>
       <WrapperSld>
-        <LeftSld>oi</LeftSld>
+        <Left/>
         <Right/>
       </WrapperSld>
+      <SwitchTheme/>
     </BodySld>
   );
 }
@@ -26,24 +29,20 @@ const BodySld = styled.div`
   box-sizing: border-box;
   background-color: ${(props => props.theme.background)};
   @media (max-width: 800px) {
-    width: 100%;
+    
   }
 `;
-
-const BarSld = styled.div`
-  background-color:beige;
-  width: 100%;
-`
 
 const WrapperSld = styled.div`
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
+  margin: 1.4rem;
+  flex:1;
+  width: calc(100% - 2.8rem);
   
   @media (max-width: 800px) {
     width: 100%;
     flex-direction: column;
   }
 `
-
-
-
